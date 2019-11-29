@@ -1,22 +1,32 @@
 {
-  "name": "youtube-to-mp3",
-  "version": "1.0.0",
-  "description": "Converts youtube videos to mp3",
-  "main": "index.js",
-  "directories": {
-    "test": "tests"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/minkovvalentin/youtubeToMp3.git"
-  },
-  "author": "valentin",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/minkovvalentin/youtubeToMp3/issues"
-  },
-  "homepage": "https://github.com/minkovvalentin/youtubeToMp3#readme"
+	"name": "youtube-to-mp3",
+	"version": "1.0.0",
+	"description": "Converts youtube videos to mp3",
+	"main": "index.js",
+	"directories": {
+		"test": "tests"
+	},
+	"scripts": {
+		"start": "node index.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/minkovvalentin/youtubeToMp3.git"
+	},
+	"author": "valentin",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/minkovvalentin/youtubeToMp3/issues"
+	},
+	"homepage": "https://github.com/minkovvalentin/youtubeToMp3#readme",
+	"dependencies": {
+		"chalk": "^3.0.0",
+		"minimist": "^1.2.0",
+		"numeral": "^2.0.6",
+		"progress-stream": "^2.0.0",
+		"shelljs": "^0.8.3",
+		"ytdl-core": "^1.0.3",
+		"ytpl": "^0.1.18"
+	}
 }
