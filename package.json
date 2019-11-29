@@ -1,0 +1,22 @@
+{
+  "name": "youtube-to-mp3",
+  "version": "1.0.0",
+  "description": "Converts youtube videos to mp3",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/minkovvalentin/youtubeToMp3.git"
+  },
+  "author": "valentin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/minkovvalentin/youtubeToMp3/issues"
+  },
+  "homepage": "https://github.com/minkovvalentin/youtubeToMp3#readme"
+}
