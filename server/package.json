@@ -1,4 +1,5 @@
 {
+	"type": "module",
 	"name": "youtube-to-mp3",
 	"version": "1.0.0",
 	"description": "Converts youtube videos to mp3",
@@ -7,8 +8,8 @@
 		"test": "tests"
 	},
 	"scripts": {
-		"start": "node index.js",
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"start": "nodemon index.js",
+		"test": "jest --watchAll"
 	},
 	"repository": {
 		"type": "git",
@@ -21,12 +22,22 @@
 	},
 	"homepage": "https://github.com/minkovvalentin/youtubeToMp3#readme",
 	"dependencies": {
+		"@babel/plugin-transform-runtime": "^7.8.3",
+		"@babel/preset-env": "^7.8.4",
+		"@types/koa-logger": "^3.1.1",
+		"babel-jest": "^25.1.0",
 		"chalk": "^3.0.0",
+		"dotenv": "^8.2.0",
+		"jest": "^25.1.0",
 		"koa": "^2.11.0",
+		"koa-logger": "^3.2.1",
+		"koa-router": "^8.0.8",
 		"minimist": "^1.2.0",
+		"nodemon": "^2.0.2",
 		"numeral": "^2.0.6",
 		"progress-stream": "^2.0.0",
 		"shelljs": "^0.8.3",
+		"supertest": "^4.0.2",
 		"ytdl-core": "^1.0.3",
 		"ytpl": "^0.1.18"
 	}
