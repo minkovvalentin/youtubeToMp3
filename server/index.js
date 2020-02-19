@@ -10,7 +10,7 @@ const router = new Router();
 app.use(logger());
 
 router.get('/', (ctx, next) => {
-	ctx.body = 'Hello World!';
+	ctx.body = 'Hello Worsld!';
 });
 
 app.use(router.routes());
