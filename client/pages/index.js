@@ -1,36 +1,38 @@
+import React, { useState } from 'react';
 import EnterLink from '../components/EnterLink';
+import style from '../styles/pages/index';
+import Button from '@material-ui/core/Button';
 
-function HomePage() {
+const HomePage = () => {
+
+	const [code, setCode] = useState(null);
+	const [codeType, setCodeType] = useState(null);
+
+	const onSubmit = async () => {
+		console.log('submitted!');
+	}
+
 	return (
 		<div className="main-container">
 			<style jsx>
-				{`
-				.main-container{
-					border:solid 100px black;
-					min-height: 100vh;
-					box-sizing: border-box;
-					position:relative
-				}
-				.enter-link-container{
-					height: 100%;
-					position: absolute;
-					width:100%;
-					display: flex;
-					justify-content:center;
-					align-items: center;
-
-				}
-				.center-content{
-				}
-			`}
+				{style}
 			</style>
-			<div className="center-content">
-				<div className="enter-link-container">
-					<EnterLink />
-				</div>
+			<div className="enter-link-container">
+				<EnterLink
+					setCode={setCode}
+					setCodeType={setCodeType}
+				/>
+				<Button
+					style={{ width: '50%', margin: '0 auto' }}
+					onClick={() => onSubmit()}
+					disabled={code ? false : true}
+					color="primary"
+					variant="outlined">
+					Submit
+				</Button>
 			</div>
-
 		</div>
+
 	);
 }
 

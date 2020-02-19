@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import FormControl from '@material-ui/core/FormControl';
-import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import RadioButton from './RadioButton';
 import { linkTypes } from '../enums/linkTypes.enum';
@@ -10,12 +9,13 @@ const text = {
 	playlist: 'Enter playlist code'
 };
 
-function EnterLink() {
+function EnterLink({ setCode, setCodeType }) {
+
 	const [radioValue, setRadioValue] = useState(linkTypes.VIDEO);
 	const [inputValue, setInputValue] = useState('');
 	const [inputHelperText, setInputHelperText] = useState('');
 	const [inputError, setInputError] = useState(false);
-
+	setCodeType(radioValue);
 
 	function onInputChange(event) {
 		if (event.target.value.length < 1) {
@@ -25,10 +25,13 @@ function EnterLink() {
 			setInputHelperText('');
 			setInputError(false);
 		}
+		setCode(event.target.value);
 		setInputValue(event.target.value);
 	}
 
 	function onRadioChange(change) {
+		setCodeType(change);
+		setCode('');
 		setRadioValue(change);
 		setInputValue('');
 		setInputHelperText('');
@@ -36,10 +39,14 @@ function EnterLink() {
 	}
 
 	return (
-		<div>
+		<div className="enter-link-container">
 			<style jsx>
 				{
-					`
+					`.enter-link-container{
+						display: grid;
+						justify-content:center;
+						justify-items: center;
+					}
 					.radio-buttons{
 						display: flex;
 						justify-content: center;
@@ -78,13 +85,6 @@ function EnterLink() {
 				}
 			</div>
 
-			<Button
-				disabled={inputValue.length < 1 ? true : false}
-				style={{ width: '100%' }}
-				color="primary"
-				variant="outlined">
-				Submit
-			</Button>
 		</div>
 
 	);
