@@ -3,12 +3,12 @@
 	"name": "youtube-to-mp3",
 	"version": "1.0.0",
 	"description": "Converts youtube videos to mp3",
-	"main": "index.js",
+	"main": "./src/app.js",
 	"directories": {
 		"test": "tests"
 	},
 	"scripts": {
-		"start": "nodemon index.js",
+		"start": "nodemon ./src/app.js",
 		"test": "jest --watchAll"
 	},
 	"repository": {
@@ -30,6 +30,7 @@
 		"dotenv": "^8.2.0",
 		"jest": "^25.1.0",
 		"koa": "^2.11.0",
+		"koa-bodyparser": "^4.2.1",
 		"koa-logger": "^3.2.1",
 		"koa-router": "^8.0.8",
 		"minimist": "^1.2.0",
