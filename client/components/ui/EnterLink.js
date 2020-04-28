@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import FormControl from '@material-ui/core/FormControl';
 import TextField from '@material-ui/core/TextField';
 import RadioButton from './RadioButton';
-import { linkTypes } from '../enums/linkTypes.enum';
+import { linkTypes } from '../../enums/linkTypes.enum';
 
 const text = {
 	video: 'Enter video url',

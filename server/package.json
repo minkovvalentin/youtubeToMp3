@@ -9,7 +9,7 @@
 	},
 	"scripts": {
 		"start": "nodemon ./src/app.js",
-		"test": "jest --watchAll"
+		"test": "jest --forceExit --detectOpenHandles  --watchAll --maxWorkers=1"
 	},
 	"repository": {
 		"type": "git",
@@ -24,6 +24,7 @@
 	"dependencies": {
 		"@babel/plugin-transform-runtime": "^7.8.3",
 		"@babel/preset-env": "^7.8.4",
+		"@types/koa-cors": "^0.0.0",
 		"@types/koa-logger": "^3.1.1",
 		"babel-jest": "^25.1.0",
 		"chalk": "^3.0.0",
@@ -31,6 +32,7 @@
 		"jest": "^25.1.0",
 		"koa": "^2.11.0",
 		"koa-bodyparser": "^4.2.1",
+		"koa-cors": "^0.0.16",
 		"koa-logger": "^3.2.1",
 		"koa-router": "^8.0.8",
 		"minimist": "^1.2.0",
