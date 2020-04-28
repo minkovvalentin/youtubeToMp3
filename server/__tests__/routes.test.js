@@ -17,8 +17,18 @@ describe('basic route tests', () => {
 		expect(response.status).toEqual(200);
 		expect(response.text).toContain('video');
 	});
+	test('POST /video', async () => {
+		const response = await request(server).post('/video');
+		expect(response.status).toEqual(200);
+		expect(response.text).toContain('video');
+	});
 	test('GET /playlist', async () => {
 		const response = await request(server).get('/playlist');
+		expect(response.status).toEqual(200);
+		expect(response.text).toContain('playlist');
+	});
+	test('POST /playlist', async () => {
+		const response = await request(server).post('/playlist');
 		expect(response.status).toEqual(200);
 		expect(response.text).toContain('playlist');
 	});

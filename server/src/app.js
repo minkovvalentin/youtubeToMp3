@@ -2,13 +2,14 @@ import Koa from 'koa';
 import logger from 'koa-logger';
 import dotenv from 'dotenv';
 import bodyParser from 'koa-bodyparser';
-
+import cors from 'koa-cors';
 import errorHandler from './middleware/error.js';
 import indexRoutes from './api/index.js';
 
 const env = dotenv.config();
 const app = new Koa();
 
+app.use(cors());
 app.use(logger());
 app.use(errorHandler);
 app.use(bodyParser());

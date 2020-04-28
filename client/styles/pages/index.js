@@ -8,9 +8,5 @@ export default css`
 	position:relative
 }
 
-.enter-link-container{	
-	text-align:center;
-	display:grid;
-	grid-row-gap: 10px;
-}
+
 `;

@@ -1,6 +1,12 @@
 node_modules
 downloads
+
+#CLIENT
 client/node_modules
 client/.next
+client/config/endpoint.js
+
+#SERVER
 server/downloads
 server/.env
+server/src/utils/fetchVideo_old.js
